@@ -1,10 +1,13 @@
-
+import React from "react";
+import Header from "./components/Header";
 
 
 function App() {
+  
+  
   return (
-    <div className="App">
-      <h1>TV Shows</h1>
+    <div>
+      <Header/>
     </div>
   );
 }
