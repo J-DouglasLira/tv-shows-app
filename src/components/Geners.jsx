@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 
+
 const Genres = () => {
     const [data, setData] = useState([]);
 
@@ -22,8 +23,27 @@ const Genres = () => {
         </tr>)
     }
 
+    if (data.length === 0) {
+        return (
+            <div>
+                <h1>Geners</h1>
+            </div>)
+    }
+
+
+    if (data.length === 0) {
+        return (
+            <div className="container">
+                <h1>Geners</h1>
+                <div className="alert alert-warning" role="alert">
+                    You have no genres created!
+                </div>
+            </div>
+        )
+    }
+
     return (
-        <div>
+        <div className="container">
             <h1>Genres</h1>
             <table className="table table-dark">
                 <thead>

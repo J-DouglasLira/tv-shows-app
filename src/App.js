@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Genres from "./components/Geners";
 import Home from "./components/Home";
+import NewGeners from "./components/NewGeners";
 
 
 
@@ -21,7 +22,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/generos" element={<Genres />} />
+          <Route path="/geners/new" exact element={<NewGeners />} />
+          <Route path="/geners" element={<Genres />} />
+          
         </Routes>
       </div>
     </Router>
