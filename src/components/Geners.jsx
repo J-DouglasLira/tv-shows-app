@@ -27,6 +27,9 @@ const Genres = () => {
         return (
             <div>
                 <h1>Geners</h1>
+                <div className = 'alert alert-warning' role = 'alert'>
+                    No geners are available!
+                </div>
             </div>)
     }
 
