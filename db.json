@@ -9,53 +9,6 @@
       "background": "//image.tmdb.org/t/p/original/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg"
     }
   },
-  "genres": {
-    "1": {
-      "name": "Ação"
-    },
-    "2": {
-      "name": "Comédia"
-    },
-    "1649160282617": {
-      "name": "name"
-    },
-    "1649160343992": {
-      "name": "name"
-    },
-    "1649160378219": {},
-    "1649160413860": {
-      "name": "Douglas"
-    },
-    "1649161248677": {
-      "name": "teste"
-    },
-    "1649161257044": {
-      "name": "Teste"
-    },
-    "1649161311581": {
-      "name": "teste"
-    },
-    "1649161324892": {
-      "name": "testeee"
-    },
-    "1649161387517": {
-      "name": "a"
-    },
-    "1649161477725": {
-      "name": "asdfasdf"
-    },
-    "1649161508731": {
-      "name": "comedia"
-    },
-    "1649161533677": {
-      "name": "return"
-    },
-    "1649161727997": {
-      "name": "teste"
-    },
-    "1649161836731": {
-      "name": "teste"
-    }
-  },
+  "genres": {},
   "count": 0
 }

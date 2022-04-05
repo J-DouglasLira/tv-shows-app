@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,24 +14,20 @@ const Genres = () => {
         })
     }, [])
 
+    const deleteGen = (id) =>{
+        axios.delete('/api/genres/'+id).then(res =>{
+            setData(data.filter(item => item.id !==id));
+        })
+    }
+
     const lineRender = (record) => {
         return (<tr key={record.id}>
             <th scope="row">{record.id}</th>
             <td>{record.name}</td>
             <td>
-                <button>+</button>
+                <button onClick={ ()=> deleteGen(record.id)}>-</button>
             </td>
         </tr>)
-    }
-
-    if (data.length === 0) {
-        return (
-            <div>
-                <h1>Geners</h1>
-                <div className = 'alert alert-warning' role = 'alert'>
-                    No geners are available!
-                </div>
-            </div>)
     }
 
 
@@ -44,10 +41,12 @@ const Genres = () => {
             </div>
         )
     }
+    
 
     return (
         <div className="container">
             <h1>Genres</h1>
+            <div><Link to="/genres/new">New Geners</Link></div>
             <table className="table table-dark">
                 <thead>
                     <tr>
