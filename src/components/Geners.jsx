@@ -14,20 +14,22 @@ const Genres = () => {
         })
     }, [])
 
-    const deleteGen = (id) =>{
-        axios.delete('/api/genres/'+id).then(res =>{
-            setData(data.filter(item => item.id !==id));
+    const deleteGen = (id) => {
+        axios.delete('/api/genres/' + id).then(res => {
+            setData(data.filter(item => item.id !== id));
         })
     }
 
     const lineRender = (record) => {
-        return (<tr key={record.id}>
-            <th scope="row">{record.id}</th>
-            <td>{record.name}</td>
-            <td>
-                <button onClick={ ()=> deleteGen(record.id)}>-</button>
-            </td>
-        </tr>)
+        return (
+            <tr key={record.id}>
+                <th scope="row">{record.id}</th>
+                <td>{record.name}</td>
+                <td>
+                    <button type = "button" className="btn btn-danger" onClick={() => deleteGen(record.id)}>Delete</button>
+                    <Link to = {'' + record.id} className="btn btn-primary">Edit</Link>
+                </td>
+            </tr>)
     }
 
 
@@ -41,7 +43,7 @@ const Genres = () => {
             </div>
         )
     }
-    
+
 
     return (
         <div className="container">

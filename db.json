@@ -9,6 +9,10 @@
       "background": "//image.tmdb.org/t/p/original/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg"
     }
   },
-  "genres": {},
+  "genres": {
+    "1649163178978": {
+      "name": "taete"
+    }
+  },
   "count": 0
 }

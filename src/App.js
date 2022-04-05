@@ -5,6 +5,7 @@ import axios from "axios";
 import Geners from "./components/Geners";
 import Home from "./components/Home";
 import NewGeners from "./components/NewGeners";
+import EditGeners from "./components/EditGeners";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
+          <Route path="/genres/:id" exact element={<EditGeners />} />
           <Route path="/genres/new" exact element={<NewGeners />} />
           <Route path="/genres" element={<Geners />} />
         </Routes>
