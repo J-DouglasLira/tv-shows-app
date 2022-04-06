@@ -14,6 +14,7 @@ const Genres = () => {
         })
     }, [])
 
+
     const deleteGen = (id) => {
         axios.delete('/api/genres/' + id).then(res => {
             const filtrado = data.filter(item => item.id !== id)
