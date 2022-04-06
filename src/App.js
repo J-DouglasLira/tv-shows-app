@@ -25,7 +25,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/genres/:id" exact element={<EditGeners />} />
           <Route path="/genres/new" exact element={<NewGeners />} />
-          <Route path="/genres" element={<Geners />} />
+          <Route path="/genres" exact element={<Geners />} />
         </Routes>
       </div>
     </Router>

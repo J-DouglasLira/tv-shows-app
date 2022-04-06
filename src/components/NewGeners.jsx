@@ -6,16 +6,16 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const NewGeners = () => {
-    const [genresName, setGenresName] = useState("");
+    const [name, setName] = useState("");
     const [success, setSuccess] = useState(false);
     const navigation = useNavigate();
     const onChange = (e) => {
-        setGenresName(e.target.value);
+        setName(e.target.value);
     }
 
     const save = () => {
         axios.post('/api/genres', {
-            name: genresName
+            name
         }).then(res => {
             setSuccess(true);
         })
@@ -31,7 +31,7 @@ const NewGeners = () => {
             <Form>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
-                    <input type="text" value={genresName} onChange={onChange} className="form-control" id="name" placeholder="Genres Name" />
+                    <input type="text" value={name} onChange={onChange} className="form-control" id="name" placeholder="Genres Name" />
                 </div>
                 <button type="button" onClick={save} className="btn btn-primary">Save</button>
             </Form>

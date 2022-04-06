@@ -16,7 +16,8 @@ const Genres = () => {
 
     const deleteGen = (id) => {
         axios.delete('/api/genres/' + id).then(res => {
-            setData(data.filter(item => item.id !== id));
+            const filtrado = data.filter(item => item.id !== id)
+            setData(filtrado);
         })
     }
 
@@ -26,8 +27,8 @@ const Genres = () => {
                 <th scope="row">{record.id}</th>
                 <td>{record.name}</td>
                 <td>
-                    <button type = "button" className="btn btn-danger" onClick={() => deleteGen(record.id)}>Delete</button>
-                    <Link to = {'' + record.id} className="btn btn-primary">Edit</Link>
+                    <button type="button" className="btn btn-danger" onClick={() => deleteGen(record.id)}>Delete</button>
+                    <Link to={'' + record.id} className="btn btn-primary">Edit</Link>
                 </td>
             </tr>)
     }
