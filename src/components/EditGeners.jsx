@@ -3,17 +3,13 @@ import {
   Form
 } from "reactstrap";
 import axios from 'axios';
-import { useNavigate , useMatch, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const EditGeners = () => {
   const [name, setName] = useState('');
   const [success, setSuccess] = useState(false);
 
   const params = useParams();
-
-
-  console.log(params);
-
 
 
   useEffect(() => {
@@ -29,7 +25,7 @@ const EditGeners = () => {
   }
 
   const save = () => {
-    axios.post('/api/genres', {
+    axios.put('/api/genres/' + params.id, {
       name
     }).then(res => {
       setSuccess(true);
