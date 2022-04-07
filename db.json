@@ -1,9 +1,14 @@
 {
   "series": {
-    "1649333991022": {
-      "name": "Douglas",
-      "poster": "//image.tmdb.org/t/p/originalundefined",
-      "background": "//image.tmdb.org/t/p/originalundefined"
+    "1649335061440": {
+      "name": "La casa de papel",
+      "poster": "//image.tmdb.org/t/p/original/qUmlmYWx3WndM01DHOTrmeiklVW.jpg",
+      "background": "//image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
+    },
+    "1649335075748": {
+      "name": "Supernatural",
+      "poster": "//image.tmdb.org/t/p/original/ovFzkkKknAo2SbM2DfOabxRvzmy.jpg",
+      "background": "//image.tmdb.org/t/p/original/nVRyd8hlg0ZLxBn9RaI7mUMQLnz.jpg"
     }
   },
   "genres": {},

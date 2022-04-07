@@ -7,7 +7,8 @@ import EditGeners from "./components/EditGeners";
 import Series from "./components/Series";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NewSerie from "./components/NewSeries";
-;
+import InfoSerie from "./components/InfoSeries";
+
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/genres" exact element={<Geners />} />
           <Route path="/series" exact element={<Series />} />
           <Route path="/series/new" exact element={<NewSerie />} />
+          <Route path="/series/:id" exact element={<InfoSerie />} />
         </Routes>
       </div>
     </Router>

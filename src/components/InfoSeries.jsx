@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Form
 } from "reactstrap";
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const NewSerie = () => {
+const InfoSerie = () => {
     const [name, setName] = useState("");
     const [success, setSuccess] = useState(false);
+    const [data, setData] = useState({});
+
+    const params = useParams();
+    useEffect(() => {
+        axios
+            .get('/api/series/' + params.id)
+            .then(res => { setData(res.data) })
+    }, [params.id]);
+
+
+
     const navigation = useNavigate();
     const onChange = (e) => {
         setName(e.target.value);
@@ -28,6 +39,7 @@ const NewSerie = () => {
     return (
         <div className="container">
             <h1>New TV-Show</h1>
+            <pre>{JSON.stringify(data)}</pre>
             <Form>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -39,4 +51,4 @@ const NewSerie = () => {
     )
 }
 
-export default NewSerie;
+export default InfoSerie;
