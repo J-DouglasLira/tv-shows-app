@@ -50,7 +50,7 @@ const Genres = () => {
     return (
         <div className="container">
             <h1>Genres</h1>
-            <div><Link to="/genres/new">New Geners</Link></div>
+            <div><Link to="/genres/new" className = "btn btn-primary">New Geners</Link></div>
             <table className="table table-dark">
                 <thead>
                     <tr>
