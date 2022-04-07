@@ -1,18 +1,11 @@
 {
   "series": {
-    "1": {
-      "name": "La casa de papel",
-      "status": "WATCHED",
-      "genre_id": 1,
-      "comments": "",
-      "poster": "//image.tmdb.org/t/p/original/yVUAfbrP5HDJugXraB7KQS0yz6Z.jpg",
-      "background": "//image.tmdb.org/t/p/original/piuRhGiQBYWgW668eSNJ2ug5uAO.jpg"
+    "1649333991022": {
+      "name": "Douglas",
+      "poster": "//image.tmdb.org/t/p/originalundefined",
+      "background": "//image.tmdb.org/t/p/originalundefined"
     }
   },
-  "genres": {
-    "2": {
-      "name": "Douglas 1"
-    }
-  },
+  "genres": {},
   "count": 0
 }
