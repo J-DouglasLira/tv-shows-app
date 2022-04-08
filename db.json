@@ -9,8 +9,22 @@
       "name": "Supernatural",
       "poster": "//image.tmdb.org/t/p/original/ovFzkkKknAo2SbM2DfOabxRvzmy.jpg",
       "background": "//image.tmdb.org/t/p/original/nVRyd8hlg0ZLxBn9RaI7mUMQLnz.jpg"
+    },
+    "1649422639876": {
+      "name": "Dexter",
+      "poster": "//image.tmdb.org/t/p/original/5DHlhR5WHDFGkM5agZqfrtR7oDX.jpg",
+      "background": "//image.tmdb.org/t/p/original/x3i8okUNTx0s7A7DlXAZjlxHFP5.jpg"
+    },
+    "1649423791169": {
+      "name": "Dexter",
+      "poster": "//image.tmdb.org/t/p/original/5DHlhR5WHDFGkM5agZqfrtR7oDX.jpg",
+      "background": "//image.tmdb.org/t/p/original/x3i8okUNTx0s7A7DlXAZjlxHFP5.jpg"
     }
   },
-  "genres": {},
+  "genres": {
+    "1649420722375": {
+      "name": "Ação"
+    }
+  },
   "count": 0
 }

@@ -39,7 +39,7 @@ const Genres = () => {
         return (
             <div className="container">
                 <h1>Genres</h1>
-                <div><Link to="/genres/new" className = "btn btn-primary">New Genres</Link></div>
+                <div><Link to="/genres/new" className="btn btn-primary">New Genres</Link></div>
                 <div className="alert alert-warning" role="alert">
                     You have no genres created!
                 </div>
@@ -51,7 +51,7 @@ const Genres = () => {
     return (
         <div className="container">
             <h1>Genres</h1>
-            <div><Link to="/genres/new" className = "btn btn-primary">New Genres</Link></div>
+            <div><Link to="/genres/new" className="btn btn-primary">New Genres</Link></div>
             <table className="table table-dark">
                 <thead>
                     <tr>
