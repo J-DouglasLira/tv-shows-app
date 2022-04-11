@@ -6,11 +6,13 @@ import {
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const InfoSerie = () => {
     const [form, setForm] = useState({});
     const [success, setSuccess] = useState(false);
     const [data, setData] = useState({});
-    const [mode, setMode] = useState("INFO");
+    const [mode, setMode] = useState("EDIT");
+    const [genres, setGenres] = useState([])
 
     const params = useParams();
     useEffect(() => {
@@ -20,17 +22,25 @@ const InfoSerie = () => {
                 setData(res.data)
                 setForm(res.data);
             })
+
     }, [params.id]);
 
-    const masterHeader = {
-        height: '50vh',
-        minHeight: '500px',
-        backgroundImage: `url(${data.background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    }
+    useEffect(() => {
+        axios
+            .get('api/genres').then(res => {
+                setGenres(res.data.data);
+            })
+    }, [data])
+
 
     const navigation = useNavigate();
+
+    const seleciona = value => () => {
+        setForm({
+            ...form,
+            status: value
+        })
+    }
 
     const onChange = field => (e) => {
         setForm({
@@ -41,16 +51,24 @@ const InfoSerie = () => {
 
     const save = () => {
         axios
-            .post('/api/series', {
-                form
-            }).then(res => {
+            .put('/api/series/' + params.id, form).then(res => {
                 setSuccess(true);
             })
     }
 
+
     if (success) {
         return navigation('/series');
     }
+
+    const masterHeader = {
+        height: '50vh',
+        minHeight: '500px',
+        backgroundImage: `url(${data.background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    }
+
 
     return (
         <div>
@@ -64,9 +82,9 @@ const InfoSerie = () => {
                             <div className="col-8">
                                 <h1 className='font-weight-light text-white'>{data.name}</h1>
                                 <div className='lead text-white'>
-                                    <Badge color='success'>Watched</Badge>
-                                    <Badge color='warning'>To watch</Badge>
-                                    TV-Show genre: {data.genre}
+                                    {data.status === 'watched' && <Badge color='success'>Watched</Badge>}
+                                    {data.status === 'toWatch' && <Badge color='warning'>To watch</Badge>}
+
                                 </div>
                             </div>
                         </div>
@@ -91,13 +109,27 @@ const InfoSerie = () => {
                             <label htmlFor="name">Name</label>
                             <input type="text" value={form.name} onChange={onChange('name')} className="form-control" id="name" placeholder="Series Name" />
                         </div>
-
-
                         <div className="form-group">
                             <label htmlFor="name">Comentários</label>
-                            <input type="text" value={form.comments} onChange={onChange('comments')} className="form-control" id="name" placeholder="Series Name" />
+                            <input type="text" value={form.comments}
+                                onChange={onChange('comments')}
+                                className="form-control"
+                                id="name"
+                                placeholder="Series Name" />
                         </div>
 
+                        <div className="form-check">
+                            <input className="form-check-input" type="radio" name="status" id="watched" value="WATCHED" onClick={seleciona('watched')} />
+                            <label className="form-check-label" htmlFor="watched">
+                                Watched
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input className="form-check-input" type="radio" name="status" id="toWatch" value="to_Watched" onClick={seleciona('toWatch')} />
+                            <label className="form-check-label" htmlFor="toWatch">
+                                To Watch
+                            </label>
+                        </div>
                         <button type="button" onClick={save} className="btn btn-primary">Save</button>
                     </Form>
                 </div>

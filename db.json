@@ -1,7 +1,10 @@
 {
   "series": {
     "1649335061440": {
-      "name": "La casa de papel",
+      "name": "La casa de Papel",
+      "status": "watched",
+      "genre_id": null,
+      "comments": "",
       "poster": "//image.tmdb.org/t/p/original/qUmlmYWx3WndM01DHOTrmeiklVW.jpg",
       "background": "//image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg"
     },
@@ -14,16 +17,14 @@
       "name": "Dexter",
       "poster": "//image.tmdb.org/t/p/original/5DHlhR5WHDFGkM5agZqfrtR7oDX.jpg",
       "background": "//image.tmdb.org/t/p/original/x3i8okUNTx0s7A7DlXAZjlxHFP5.jpg"
-    },
-    "1649423791169": {
-      "name": "Dexter",
-      "poster": "//image.tmdb.org/t/p/original/5DHlhR5WHDFGkM5agZqfrtR7oDX.jpg",
-      "background": "//image.tmdb.org/t/p/original/x3i8okUNTx0s7A7DlXAZjlxHFP5.jpg"
     }
   },
   "genres": {
     "1649420722375": {
       "name": "Ação"
+    },
+    "1649677327815": {
+      "name": "Comédia"
     }
   },
   "count": 0
